@@ -24,7 +24,7 @@ BLEDescriptor ble_descriptor_notify("19B10013-E8F2-537E-4F6C-D104768A1214", "des
 int sensor_pin = A7; //
 int led_built_in = LED_BUILTIN;
 const int THRESH_1 = 720;
-const int THRESH_2 = 900;
+const int THRESH_2 = 900;//outta 1023
 const int led_T1 = 4 ; //D4
 const int led_T2 = 5;//D5
 const int TIMER = 10;//time to hold the sensor
