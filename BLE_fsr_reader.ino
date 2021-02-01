@@ -34,16 +34,16 @@ int counter_T2 = 0;
 void setup() {
 
   // Serial.begin(9600);
-   
+
   //while (!Serial);
   //Serial.println("Serial has started");
-  
+
   digitalWrite(LED_PWR, LOW);//turn off built in power led
   digitalWrite(PIN_ENABLE_SENSORS_3V3, LOW); // turn off sensors
   digitalWrite(PIN_ENABLE_I2C_PULLUP, LOW);//havent tried that yet
-  
+
   //pinMode(led_built_in, OUTPUT);//uses built in led as indicator
-  
+
   pinMode(sensor_pin, INPUT);
   pinMode(led_T1, OUTPUT);
   pinMode(led_T2, OUTPUT);
@@ -134,7 +134,7 @@ void BLESetup() {
   //initialize the characteristics
   ble_threshold.setValue(0);
   ble_notify.setValue(0);
-//  ble_message.setValue("No pressure.");
+  //  ble_message.setValue("No pressure.");
 
   //add charact to service
   service_pressure.addCharacteristic(ble_threshold);
@@ -154,8 +154,8 @@ void BLESetup() {
 
 
   //Advertising interval
-   BLE.setAdvertisingInterval(2000);
-   
+  BLE.setAdvertisingInterval(2000);
+
   // start advertising (so that device can connect)
   BLE.advertise();
   // Serial.println("Bluetooth device active, waiting for connections...");
